@@ -1,0 +1,104 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    // Editor rules
+    "editor.detectIndentation": false,
+    "editor.minimap.maxColumn": 120,
+    "editor.rulers": [
+        120,
+    ],
+    "editor.wordWrapColumn": 120,
+    "editor.renderWhitespace": "none",
+    // Vim Extension
+    "vim.textwidth": 120,
+    // SFDX Extension Pack
+    "salesforcedx-vscode-core.retrieve-test-code-coverage": true,
+    "salesforcedx-vscode-apex.java.home": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.4.11-hotspot",
+    "salesforcedx-vscode-apex.enable-semantic-errors": true,
+    // Todo Tree Extension
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "whole-line",
+        "background": "black",
+        "opacity": 50,
+        "iconColour": "green",
+        "fontWeight": "bold"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "foreground": "green"
+        },
+        "FIXME": {
+            "icon": "bell",
+            "iconColour": "yellow",
+            "foreground": "yellow"
+        }
+    },
+    // Search files
+    "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true,
+    "**/classes/*meta.xml": true,
+    "**/classes/dlrs*": true,
+    "**/classes/ConnectionsUIController.cls": true,
+    "**/classes/ConnectionWrapper.cls": true,
+    "**/classes/ContactRoleWrapper.cls": true,
+    "**/classes/RevertUserEmailsBatchable.cls": true,
+    "**/classes/RevertUserEmailsSandboxPostCopy.cls": true,
+    "**/classes/TestContactRoleTrigger.cls": true,
+    "**/classes/TestContactTrigger.cls": true,
+    "**/classes/TestGeoAreaServedTrigger.cls": true,
+    "**/classes/TestOrganizationTrigger.cls": true,
+    "**/classes/TestOrgConnectionTrigger.cls": true,
+    "**/classes/TriggerHandlerContact.cls": true,
+    "**/classes/TriggerHandlerContactRole.cls": true,
+    "**/classes/TriggerHandlerGeoAreaServed.cls": true,
+    "**/classes/TriggerHandlerGeographicEntity.cls": true,
+    "**/classes/TriggerHandlerOrganization.cls": true,
+    "**/classes/TriggerHandlerOrgConnection.cls": true,
+    "**/classes/TriggerHandlerProgram.cls": true,
+    "**/classes/TriggerHandlerProgramCodingBudget.cls": true,
+    "**/classes/UtilAccount.cls": true,
+    "**/classes/UtilConnection.cls": true,
+    "**/classes/UtilContact.cls": true,
+    "**/classes/UtilContactRole.cls": true,
+    "**/classes/UtilGeographicEntity.cls": true,
+    "**/classes/UtilProgram.cls": true,
+    },
+    // Explorer files
+    "files.exclude": {
+    "**/classes/*meta.xml": true,
+    "**/classes/dlrs*": true,
+    "**/classes/ConnectionsUIController.cls": true,
+    "**/classes/ConnectionWrapper.cls": true,
+    "**/classes/ContactRoleWrapper.cls": true,
+    "**/classes/RevertUserEmailsBatchable.cls": true,
+    "**/classes/RevertUserEmailsSandboxPostCopy.cls": true,
+    "**/classes/TestContactRoleTrigger.cls": true,
+    "**/classes/TestContactTrigger.cls": true,
+    "**/classes/TestGeoAreaServedTrigger.cls": true,
+    "**/classes/TestOrganizationTrigger.cls": true,
+    "**/classes/TestOrgConnectionTrigger.cls": true,
+    "**/classes/TriggerHandlerContact.cls": true,
+    "**/classes/TriggerHandlerContactRole.cls": true,
+    "**/classes/TriggerHandlerGeoAreaServed.cls": true,
+    "**/classes/TriggerHandlerGeographicEntity.cls": true,
+    "**/classes/TriggerHandlerOrganization.cls": true,
+    "**/classes/TriggerHandlerOrgConnection.cls": true,
+    "**/classes/TriggerHandlerProgram.cls": true,
+    "**/classes/TriggerHandlerProgramCodingBudget.cls": true,
+    "**/classes/UtilAccount.cls": true,
+    "**/classes/UtilConnection.cls": true,
+    "**/classes/UtilContact.cls": true,
+    "**/classes/UtilContactRole.cls": true,
+    "**/classes/UtilGeographicEntity.cls": true,
+    "**/classes/UtilProgram.cls": true,
+    },
+    // Unsorted settings
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "workbench.colorTheme": "Solarized Dark",
+    "files.eol": "\n",
+}
