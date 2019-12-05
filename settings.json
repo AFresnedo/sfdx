@@ -101,4 +101,7 @@
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
     "workbench.colorTheme": "Solarized Dark",
     "files.eol": "\n",
+    "task.slowProviderWarning": [
+        "npm"
+    ],
 }

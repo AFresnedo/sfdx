@@ -1,21 +1,293 @@
 {
-	// Place your snippets for apex here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-    // }
-    
-    "Class Description": {
-        "prefix": "classdescript",
-        "body":"/***************************************************************************************************\nName          : $1\nAuthor        : $2\nDate          : $3\nPurpose       : $4\nDependencies  :\n    Classes   : $5\n    Metadata  : $6\n***************************************************************************************************/",
-        "description": "Fill out class description"
-    }
+	"doc-u": {
+		"prefix": "s-comment-u",
+		"body": [
+			"GMS Team, Kit Hensel"
+		],
+		"description": "Current Developer name."
+	},
+	"doc-class": {
+		"prefix": "s-comment-class",
+		"body": [
+		  "/***************************************************************************************************",
+		  "Name          : ${1:CurrentClassName}",
+		  "Author        : GMS Team, ${2:Author}",
+		  "Date          : ${3}/${4}/19",
+		  "Purpose       : ${5}",
+		  "***************************************************************************************************/"
+		],
+		"description": "Class comment."
+	},
+	"doc-class-full": {
+		"prefix": "s-comment-class-full",
+		"body": [
+		  "/***************************************************************************************************",
+		  "Name          : ${1:CurrentClassName}",
+		  "Author        : GMS Team, ${2:Author}",
+		  "Date          : ${3}/${4}/19",
+		  "Purpose       : ${5}",
+		  "Dependencies  :",
+		  "    Classes   : ${6:None}",
+		  "    Metadata  : ${7:None}",
+		  "***************************************************************************************************/"
+		],
+		"description": "Class comment w/ dependencies."
+	},
+	"comment-method": {
+		"prefix": "s-comment-method",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @return ${4}",
+			" */"
+		],
+		"description": "Method comment with default param."
+	},
+	"comment-method-1": {
+		"prefix": "s-comment-method-1",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @return ${4}",
+			" */"
+		],
+		"description": "Method comment with 1 param."
+	},
+	"comment-method-2": {
+		"prefix": "s-comment-method-2",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @param ${4}",
+			" * @return ${5}",
+			" */"
+		],
+		"description": "Method comment with 2 params."
+	},
+	"comment-method-3": {
+		"prefix": "s-comment-method-3",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @param ${4}",
+			" * @param ${5}",
+			" * @return ${6}",
+			" */"
+		],
+		"description": "Method comment with 3 params."
+	},
+	"comment-method-v": {
+		"prefix": "s-comment-method-v",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" */"
+		],
+		"description": "Void Method comment with default param."
+	},
+	"comment-method-v-1": {
+		"prefix": "s-comment-method-v-1",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" */"
+		],
+		"description": "Void Method comment with default param."
+	},
+	"comment-method-v-2": {
+		"prefix": "s-comment-method-v-2",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @param ${4}",
+			" */"
+		],
+		"description": "Void Method comment with default param."
+	},
+	"comment-method-v-3": {
+		"prefix": "s-comment-method-v-3",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3}",
+			" * @param ${4}",
+			" * @param ${5}",
+			" */"
+		],
+		"description": "Void Method comment with default param."
+	},
+	"test-new": {
+		"prefix": "s-test-new",
+		"body": [
+		  "@isTest static void test${1:MethodName}() {",
+		  "\tBoolean result;\n",
+		  "\t${2}",
+		  "",
+		  "\t// Validate",
+		  "\tSystem.assertEquals(true, null); ",
+		  "\t",
+		  "\t// Validate",
+		  "\tSystem.assertEquals(true, null);",
+		  "\t",
+		  "\t// Validate",
+		  "\tSystem.assertEquals(true, null);",
+		  "}"
+		],
+		"description": "test-new"
+	},
+	"test-true": {
+		"prefix": "s-test-true",
+		"body": [
+		  "System.assertEquals(true, ${1});"
+		],
+		"description": "Generate system assert to true."
+	},
+	"test-false": {
+		"prefix": "s-test-false",
+		"body": [
+		  "System.assertEquals(false, ${1});"
+		],
+		"description": "Generate system assert to false."
+	},
+	"test-null": {
+		"prefix": "s-test-null",
+		"body": [
+		  "System.assertEquals(null, ${1});"
+		],
+		"description": "Generate system assert to null."
+	},
+	"test-not-null": {
+		"prefix": "s-test-not-null",
+		"body": [
+		  "System.assertNotEquals(null, ${1});"
+		],
+		"description": "Generate system assert to not null."
+	},
+	"test-fakeId": {
+		"prefix": "s-test-fakeId",
+		"body": [
+		  "UtilGMS.getFakeId(${1}.getSObjectType());"
+		],
+		"description": "Generate a fake id for SObject in tests."
+	},
+	"select-line": {
+		"prefix": "s-select-line",
+		"body": [
+		  "List<${1}> lst${2} = [SELECT Id, ${3} FROM ${1}];"
+		],
+		"description": "Generate 1 liner select query."
+	},
+	"select-multi": {
+		"prefix": "s-select-multi",
+		"body": [
+		  "List<${1}> lst${2:Variable} = [",
+		  "\tSELECT Id, ${3}",
+		  "\tFROM ${1}",
+		  "\tWHERE ${5} = :${6}",
+		  "];"
+		],
+		"description": "Generate multi-line select query."
+	},
+	"map-new": {
+		"prefix": "s-map-new",
+		"body": [
+		  "Map<Id, ${1}> map${2} = new Map<Id, ${1}>();\n"
+		],
+		"description": "Generate new map."
+	},
+	"list-new": {
+		"prefix": "s-list-new",
+		"body": [
+		  "List<${1}> lst${2} = new List<${1}>();\n"
+		],
+		"description": "Generate new list."
+	},
+	"set-new": {
+		"prefix": "s-set-new",
+		"body": [
+		  "Set<${1:Id}> set${2:Ids} = new Set<${1:Id}>();\n"
+		],
+		"description": "Generate new set."
+	},
+	"class-new": {
+		"prefix": "s-class-new",
+		"body": [
+		  "/***************************************************************************************************",
+		  "Name          : ${1:CurrentClassName}",
+		  "Author        : GMS Team, ${2}",
+		  "Date          : ${3}/${4}/19",
+		  "Purpose       : ${5}",
+		  "***************************************************************************************************/",
+		  "public inherited sharing class ${1:CurrentClassName}{",
+		  "\t${7}",
+		  "}"
+		],
+		"description": "Generate new class."
+	},
+	"method-new": {
+		"prefix": "s-method-new",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3} ${4}",
+			" * @return ${5}",
+			" */",
+			"public static ${6} ${7:methodName}(${3}) {",
+			"\t${8}",
+			"}"
+		],
+		"description": "Generate new method."
+	},
+	"method-new-1": {
+		"prefix": "s-method-new-1",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3} ${4}",
+			" * @return ${5}",
+			" */",
+			"public static ${6} ${7:methodName}(${3}) {",
+			"\t${8}",
+			"}"
+		],
+		"description": "Generate new method with one param."
+	},
+	"method-new-2": {
+		"prefix": "s-method-new-2",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3} ${4}",
+			" * @param ${5} ${6}",
+			" * @return ${7}",
+			" */",
+			"public static ${8} ${9:methodName}(${10} ${3}, ${11} ${5}) {",
+			"\t${12}",
+			"}"
+		],
+		"description": "Generate new method with two params."
+	},
+	"method-new-3": {
+		"prefix": "s-method-new-3",
+		"body": [
+			"/**",
+			" * GMS-${1} ${2}",
+			" * @param ${3} ${4}",
+			" * @param ${5} ${6}",
+			" * @param ${7} ${8}",
+			" * @return ${9}",
+			" */",
+			"public static ${10} ${11:methodName}(${12} ${3}, ${13} ${5}, ${14} ${7}) {",
+			"\t${15}",
+			"}"
+		],
+		"description": "Generate new method with two params."
+	}
 }
